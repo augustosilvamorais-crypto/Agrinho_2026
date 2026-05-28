@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioPortal 360: O Elo do Campo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <div class="container">
+            <h1>🌱 BioPortal 360</h1>
+            <nav>
+                <ul>
+                    <li><a href="#simulador">Simulador Selo Verde</a></li>
+                    <li><a href="#agrinho">Agrinho 2026</a></li>
+                    <li><a href="#perfil">Sobre Mim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="simulador" class="container">
+        <h2>Simulador de Sustentabilidade Rural</h2>
+        <p>Preencha os dados da sua propriedade para descobrir o seu nível de sustentabilidade e se você está apto ao <strong>Selo Verde</strong>.</p>
+       
+        <div class="card-simulador">
+            <form id="form-sustentabilidade">
+                <div class="campo">
+                    <label for="agua">Gestão de Recursos Hídricos:</label>
+                    <select id="agua" required>
+                        <option value="1">Sem controle (Desperdício alto)</option>
+                        <option value="2">Irrigação básica e monitorada</option>
+                        <option value="3">Captação de água da chuva e reuso</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="defensivos">Uso de Defensivos Agrícolas:</label>
+                    <select id="defensivos" required>
+                        <option value="1">Uso intensivo de químicos</option>
+                        <option value="2">Uso moderado / Manejo Integrado</option>
+                        <option value="3">Agricultura Orgânica / Controle biológico</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="solo">Manejo e Conservação do Solo:</label>
+                    <select id="solo" required>
+                        <option value="1">Preparo convencional (Risco de erosão)</option>
+                        <option value="2">Rotação de culturas</option>
+                        <option value="3">Plantio direto e adubação verde</option>
+                    </select>
+                </div>
+
+                <button type="button" onclick="calcularSelo()">Gerar Diagnóstico</button>
+            </form>
+
+            <div id="resultado-box" class="oculto">
+                <h3 id="titulo-resultado">Seu Diagnóstico</h3>
+                <p id="texto-resultado"></p>
+                <div id="selo-visual"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="agrinho" class="bg-claro">
+        <div class="container">
+            <h2>Sobre o Programa Agrinho 2026</h2>
+            <div class="texto-destaque">
+                <p>O <strong>Programa Agrinho</strong> é a maior iniciativa de responsabilidade social do Sistema FAEP/SENAR-PR. A edição de 2026 desafia alunos e professores a pensarem no futuro do agronegócio de forma inovadora e sustentável.</p>
+                <p>O <em>BioPortal 360</em> nasceu para responder a esse desafio: criar um "Elo" tecnológico entre as práticas tradicionais do campo e as necessidades ecológicas do amanhã, capacitando pequenos e médios produtores a entenderem e melhorarem seu impacto ambiental.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="perfil" class="container">
+        <h2>Conheça o Idealizador</h2>
+        <div class="perfil-card">
+            <div class="perfil-info">
+                <h3>[Seu Nome Aqui]</h3>
+                <p><strong>Estudante e Jovem Inovador</strong></p>
+                <p>Sou apaixonado por tecnologia e acredito que a inovação digital pode transformar a nossa agricultura. Criei o BioPortal 360 com a visão de que a informação acessível é o primeiro passo para um campo mais verde e produtivo. Minha missão no Agrinho 2026 é mostrar que o campo e o código podem caminhar juntos.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 BioPortal 360: O Elo do Campo - Projeto para o Agrinho. Desenvolvido com 💚.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

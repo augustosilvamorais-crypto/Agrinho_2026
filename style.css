@@ -1,1 +1,194 @@
+/* Variáveis de Cores (Verde Agro) */
+:root {
+    --verde-escuro: #2d6a4f;
+    --verde-principal: #40916c;
+    --verde-claro: #d8f3dc;
+    --texto-escuro: #1b4332;
+    --fundo-claro: #f4fcf7;
+    --alerta: #e07a5f;
+    --sucesso: #52b788;
+}
 
+/* Reset e Configurações Básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: var(--texto-escuro);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--verde-escuro);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--verde-claro);
+}
+
+/* Seções e Tipografia */
+h2 {
+    color: var(--verde-principal);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.bg-claro {
+    background-color: var(--fundo-claro);
+}
+
+/* Simulador */
+.card-simulador {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+    border: 2px solid var(--verde-claro);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--verde-principal);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--verde-escuro);
+}
+
+/* Área de Resultado */
+#resultado-box {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.oculto {
+    display: none;
+}
+
+.nivel-baixo {
+    background-color: #fff3ed;
+    border: 2px solid var(--alerta);
+    color: #9d3b20;
+}
+
+.nivel-medio {
+    background-color: #fffbcc;
+    border: 2px solid #e9c46a;
+    color: #8f7215;
+}
+
+.nivel-alto {
+    background-color: var(--verde-claro);
+    border: 2px solid var(--sucesso);
+    color: var(--verde-escuro);
+}
+
+/* Textos e Perfil */
+.texto-destaque {
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.perfil-card {
+    background-color: var(--fundo-claro);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    border-left: 5px solid var(--verde-principal);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--verde-escuro);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsividade (Celulares) */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
